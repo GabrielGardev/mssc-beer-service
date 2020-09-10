@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class BeerPagedList extends PageImpl<BeerDto> {
         super(content, PageRequest.of(number, size), totalElements);
     }
 
-    public BeerPagedList(List<BeerDto> content) {
-        super(content);
+    public BeerPagedList(List<BeerDto> content, Pageable pageable, long total) {
+        super(content, pageable, total);
     }
 }
