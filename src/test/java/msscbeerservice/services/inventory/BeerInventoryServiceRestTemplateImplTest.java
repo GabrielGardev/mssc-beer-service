@@ -1,5 +1,6 @@
 package msscbeerservice.services.inventory;
 
+import com.sun.xml.bind.v2.TODO;
 import msscbeerservice.bootstrap.BeerLoader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -21,9 +22,10 @@ class BeerInventoryServiceRestTemplateImplTest {
 
     @Test
     void getOnHandInventory() {
-        Integer qoh = beerInventoryService.getOnHandInventory(BeerLoader.BEER_1_UUID);
-
-        System.out.println(qoh);
+        //TODO: evolve to use UPC
+//        Integer qoh = beerInventoryService.getOnHandInventory(BeerLoader.BEER_1_UUID);
+//
+//        System.out.println(qoh);
 
     }
 }
