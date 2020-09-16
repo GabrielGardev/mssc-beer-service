@@ -1,6 +1,9 @@
-package msscbeerservice.events;
+package sfg.common.events;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import msscbeerservice.web.model.BeerDto;
 
 import java.io.Serializable;

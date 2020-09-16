@@ -4,14 +4,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import msscbeerservice.config.JmsConfig;
 import msscbeerservice.domain.Beer;
-import msscbeerservice.events.BrewBeerEvent;
-import msscbeerservice.events.NewInventoryEvent;
 import msscbeerservice.repositories.BeerRepository;
+import msscbeerservice.web.controller.NotFoundException;
 import msscbeerservice.web.model.BeerDto;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import sfg.common.events.BrewBeerEvent;
+import sfg.common.events.NewInventoryEvent;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -25,7 +26,7 @@ public class BrewBeerListener {
     @JmsListener(destination = JmsConfig.BREWING_REQUEST_QUEUE)
     public void listen(BrewBeerEvent event){
         BeerDto beerDto = event.getBeerDto();
-        Beer beer = beerRepository.getOne(beerDto.getId());
+        Beer beer = beerRepository.getById(beerDto.getId()).orElseThrow(NotFoundException::new);
 
         beerDto.setQuantityOnHand(beer.getQuantityToBrew());
 

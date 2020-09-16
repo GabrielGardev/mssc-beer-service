@@ -4,13 +4,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import msscbeerservice.config.JmsConfig;
 import msscbeerservice.domain.Beer;
-import msscbeerservice.events.BrewBeerEvent;
 import msscbeerservice.repositories.BeerRepository;
 import msscbeerservice.services.inventory.BeerInventoryService;
 import msscbeerservice.web.mappers.BeerMapper;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import sfg.common.events.BrewBeerEvent;
 
 import java.util.List;
 

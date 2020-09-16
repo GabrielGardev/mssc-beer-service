@@ -1,4 +1,4 @@
-package msscbeerservice.events;
+package sfg.common.events;
 
 import lombok.NoArgsConstructor;
 import msscbeerservice.web.model.BeerDto;
