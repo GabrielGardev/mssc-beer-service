@@ -8,7 +8,6 @@ import msscbeerservice.events.BrewBeerEvent;
 import msscbeerservice.repositories.BeerRepository;
 import msscbeerservice.services.inventory.BeerInventoryService;
 import msscbeerservice.web.mappers.BeerMapper;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -19,14 +18,13 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-@ConditionalOnProperty(value = "scheduling.enabled", havingValue = "true", matchIfMissing = false)
 public class BrewingService {
     private final BeerRepository beerRepository;
     private final BeerInventoryService beerInventoryService;
     private final JmsTemplate jmsTemplate;
     private final BeerMapper beerMapper;
 
-    @Scheduled(fixedRate = 200) //every 5 seconds
+    @Scheduled(fixedRate = 5000) //every 5 seconds
     public void checkForLowInventory(){
         List<Beer> beers = beerRepository.findAll();
 
