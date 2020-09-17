@@ -29,7 +29,6 @@ public class BeerLoader implements CommandLineRunner {
 
     private void loadBeerObjects() {
         Beer b1 = Beer.builder()
-                .version(1L)
                 .beerName("Mango Bobs")
                 .beerStyle(BeerStyleEnum.IPA.name())
                 .quantityToBrew(200)
@@ -39,7 +38,6 @@ public class BeerLoader implements CommandLineRunner {
                 .build();
 
         Beer b2 = Beer.builder()
-                .version(1L)
                 .beerName("Galaxy Cat")
                 .beerStyle(BeerStyleEnum.PALE_ALE.name())
                 .quantityToBrew(200)
@@ -49,7 +47,6 @@ public class BeerLoader implements CommandLineRunner {
                 .build();
 
         Beer b3 = Beer.builder()
-                .version(1L)
                 .beerName("Pinball Porter")
                 .beerStyle(BeerStyleEnum.PORTER.name())
                 .quantityToBrew(200)
