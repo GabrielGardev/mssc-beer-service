@@ -6,13 +6,13 @@ import msscbeerservice.config.JmsConfig;
 import msscbeerservice.domain.Beer;
 import msscbeerservice.repositories.BeerRepository;
 import msscbeerservice.web.controller.NotFoundException;
-import msscbeerservice.web.model.BeerDto;
+import sfg.brewery.model.BeerDto;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sfg.common.events.BrewBeerEvent;
-import sfg.common.events.NewInventoryEvent;
+import sfg.brewery.model.events.BrewBeerEvent;
+import sfg.brewery.model.events.NewInventoryEvent;
 
 @Slf4j
 @RequiredArgsConstructor

@@ -2,7 +2,7 @@ package msscbeerservice.web.mappers;
 
 
 import msscbeerservice.domain.Beer;
-import msscbeerservice.web.model.BeerDto;
+import sfg.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

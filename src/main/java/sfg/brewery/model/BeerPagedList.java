@@ -1,4 +1,4 @@
-package msscbeerservice.web.model;
+package sfg.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

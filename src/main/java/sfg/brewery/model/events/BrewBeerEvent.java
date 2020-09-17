@@ -1,7 +1,7 @@
-package sfg.common.events;
+package sfg.brewery.model.events;
 
 import lombok.NoArgsConstructor;
-import msscbeerservice.web.model.BeerDto;
+import sfg.brewery.model.BeerDto;
 
 @NoArgsConstructor
 public class BrewBeerEvent extends BeerEvent {

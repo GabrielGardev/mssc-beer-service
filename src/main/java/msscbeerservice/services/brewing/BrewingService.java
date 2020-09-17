@@ -10,7 +10,7 @@ import msscbeerservice.web.mappers.BeerMapper;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import sfg.common.events.BrewBeerEvent;
+import sfg.brewery.model.events.BrewBeerEvent;
 
 import java.util.List;
 
